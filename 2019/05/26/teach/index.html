@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Sakura新手使用手册 | yremp</title>
+  
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.4/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/lib.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/font.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/insight.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.0/sharejs.css">
+  <!-- gitalk-css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.3/gitalk.css">
+  <style>
+      @media(max-width: 768px){
+       #video-container{
+          display: none;
+        }
+      }
+    </style>
+  
+  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+    /*Initial Variables*/
+    var mashiro_option = new Object();
+    var mashiro_global = new Object();
+    mashiro_option.NProgressON = true;
+    /* 
+     * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+     * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+     */
+    mashiro_option.email_domain = "";
+    mashiro_option.email_name = "";
+    mashiro_option.cookie_version_control = "";
+    mashiro_option.qzone_autocomplete = false;
+    mashiro_option.site_name = "君の名はyremp";
+    mashiro_option.author_name = "yremp";
+    mashiro_option.site_url = "https://yremp.github.io/";
+    mashiro_option.v_appId = "Qtrxu5pUbpfjbn2CpMH1jetC-gzGzoHsz";
+    mashiro_option.v_appKey = "72NpGpYhuAYcKyDhYSOFE1b2";
+    mashiro_option.mathjax = "0";
+    mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
+    mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+    /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+    var bg = "https://yremp.live/wp-content/uploads/2019/08/page.jpg".split(",");
+    var bgindex = Math.floor(Math.random() * bg.length);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+      alert('朋友，IE浏览器未适配哦~');
+    }
+  </script>
+  <style type="text/css">
+    .hljs-ln {
+      border-collapse: collapse
+    }
+
+    .hljs-ln td {
+      padding: 0
+    }
+
+    .hljs-ln-n:before {
+      content: attr(data-line-number)
+    }
+  </style>
+  <style type="text/css">
+    .site-top .lower nav {
+      display: block !important;
+    }
+
+    .author-profile i,
+    .post-like a,
+    .post-share .show-share,
+    .sub-text,
+    .we-info a,
+    span.sitename,
+    .post-more i:hover,
+    #pagination a:hover,
+    .post-content a:hover,
+    .float-content i:hover {
+      color: #FE9600
+    }
+
+    .feature i,
+    .download,
+    .navigator i:hover,
+    .links ul li:before,
+    .ar-time i,
+    span.ar-circle,
+    .object,
+    .comment .comment-reply-link,
+    .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+      background: #FE9600
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #FE9600
+    }
+
+    .download,
+    .navigator i:hover,
+    .link-title,
+    .links ul li:hover,
+    #pagination a:hover,
+    .comment-respond input[type='submit']:hover {
+      border-color: #FE9600
+    }
+
+    .entry-content a:hover,
+    .site-info a:hover,
+    .comment h4 a,
+    #comments-navi a.prev,
+    #comments-navi a.next,
+    .comment h4 a:hover,
+    .site-top ul li a:hover,
+    .entry-title a:hover,
+    #archives-temp h3,
+    span.page-numbers.current,
+    .sorry li a:hover,
+    .site-title a:hover,
+    i.iconfont.js-toggle-search.iconsearch:hover,
+    .comment-respond input[type='submit']:hover {
+      color: #FE9600
+    }
+
+    .comments .comments-main {
+      display: block !important;
+    }
+
+    .comments .comments-hidden {
+      display: none !important;
+    
+    }
+
+  
+
+    
+    
+    
+  </style>
+</head></html>
+<body
+  class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+</div>
+<style>
+    .changeSkin {
+	position: fixed;
+	bottom: 0;
+	right: 0px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	font-family: 'Ubuntu';
+	padding: 10px 20px;
+	transiton-property: right;
+	transition-duration: .3s, .3s
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin-gear {
+	position: fixed;
+	bottom: -999px;
+	right: 5px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	visibility: hidden;
+	white-space: nowrap;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px 10px 0 0
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin .close-skinMenu {
+	position: relative;
+	z-index: 99;
+	cursor: pointer
+}
+
+.keys-line-add {
+	text-align: right;
+	margin-right: 22px
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+position:relative;
+z-index:99;
+cursor:pointer;
+}
+
+.changeSkin-gear span:before {
+	content: "åˆ‡æ¢ä¸»é¢˜ | Change Skin "
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+.img-preload {
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+.rotating {
+	-webkit-animation: rotating 3s linear infinite;
+	-moz-animation: rotating 3s linear infinite;
+	-ms-animation: rotating 3s linear infinite;
+	-o-animation: rotating 3s linear infinite;
+	animation: rotating 3s linear infinite
+}
+
+.inline-block {
+	display: inline-block
+}
+
+.block {
+	display: block
+}
+
+.center-text {
+	margin: auto;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 80px;
+	text-transform: uppercase
+}
+
+
+
+.code-block-fullscreen-html-scroll {
+	overflow: hidden
+}
+
+</style>
+  <a href="#" class="cd-top faa-float animated" id="cd-top"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://yremp.github.io/">
+          <img src="https://yremp.live/wp-content/uploads/2019/06/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>南风过境，十里春风不如你！</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/yremp" target="_blank" class="github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/" target="_blank" class="wangyiyun" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/" target="_blank" class="zhihu" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="qq">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/qq.png">
+                  </a>
+                  <div class="qqInner">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/qq.png">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/wechat.png">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style>
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name src width="auto" preload="flase">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="shironeko">yremp</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fas fa-home  fa-1x" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  far fa-folder-open" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fab fa-windows" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fas fa-clone" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fas fa-tasks" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/yremp2/image@2.0/hendmenu.png);" src="/images/huyao.gif" data-src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/hendmenu.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Sakura新手使用手册</h1>
+      <p class="entry-census">
+        <span>
+          <a href="./">
+            <img src="https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.4//img/custom/head.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="./">yremp</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-5-26<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>有很多小伙伴使用Sakura这款主题却又不知到如何美化，到处找别人问很麻烦，而我当初也是花了很长时间去摸索，才了解了这款主题的一些具体设置。下面我就按照从主页到子页面，从顶部到页脚的顺序给你们介绍如何自定义这款主题。</p>
+<p><font color="#0099ff" size="3" face="黑体"><br><br>1.本教程主要写给刚入门的小白，大佬随意。<br><br>2.教程比较长，建议根据右边标题索引快速找到自己感兴趣的部分<br></font></p>
+<p><br></p>
+<h2 id="一：顶部站点名字："><a href="#一：顶部站点名字：" class="headerlink" title="一：顶部站点名字："></a>一：顶部站点名字：</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/headmark.png" alt><br>这个是在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>这个配置文件中修改</p>
+<pre><code>//site name
+prefixName: 君の名は
+siteName: yremp
+url: https://yremp2.github.io/ 
+</code></pre><p>其中，URL是点击后跳转地址.<br>由于我在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/source/css/style.css</font>下修改了样式表去掉了prefixName，所以图上是没有的<br>大家如果想修改其相关的样式也可以去这个css文件中自定义,这个文件是主要的css文件，大部分的样式都是由这个文件定义的。</p>
+<h2 id="二：顶部导航栏"><a href="#二：顶部导航栏" class="headerlink" title="二：顶部导航栏"></a>二：顶部导航栏</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/hendmenu.png" alt><br>这个在主题使用教程里面，作者好像已经是给出来了，大家可以仔细去阅读以下(当初我就是没有认真阅读爬了不少坑)<br>这也是<font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>这个配置文件里面定义的</p>
+<pre><code>menus:
+  首页: { path: /, fa: fas fa-home  fa-1x }
+  归档: { path: /archives, fa: far fa-folder-open, submenus: { 
+    技术: {path: /categories/技术/, fa: fab fa-windows }, 
+    生活: {path: /categories/生活/, fa: fa-book }, 
+    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
+    随想: {path: /categories/随想/, fa: fa-commenting-o },
+    转载: {path: /categories/转载/, fa: fas fa-clone }
+  } }
+  清单: { path: javascript:;, fa: fas fa-tasks,submenus: { 
+    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
+    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+    歌单: {path: /music/, fa: fa-headphones },
+    图集: {path: /tags/图集/, fa: fa-photo }
+  } }
+  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友人帐: { path: /links/, fa: fa-link faa-shake }
+</code></pre><p>  前面的path是网页路径，这个不建议修改，但可以修改。后面的如:<font color="#0099ff" size="3" face="黑体"> fa: fas fa-home  fa-1x </font>这个就是对应的图标设置,关于这个图标大家可以去<a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">fontawesome</a>看教程以及选择自己喜欢的图标，导航栏下拉下拉菜单的图标修改和导航栏相同。</p>
+<h2 id="三：头像"><a href="#三：头像" class="headerlink" title="三：头像"></a>三：头像</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/head.png" alt><br>很多小伙伴拿到主题后第一时间肯定是修改这个头像，毕竟这个比较能代表自己嘛，那么这个头像配置在哪(⊙o⊙)?<br>如果有经验的小伙伴肯定是自己就能找到，这个配置在：</p>
+<p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font></p>
+<pre><code>cdn: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5
+avatar: /img/custom/head.jpg
+</code></pre><p>我这个是使用cdn后的路径，也可以修改为：</p>
+<pre><code>avatar: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/custom/head.jpg
+</code></pre><p>至于cdn：大家可以去看我的另一篇博客<a href="https://yremp2.github.io/2019/05/24/jsDeliver+github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">jsDeliver+github使用教程</a></p>
+<h2 id="四：社交栏"><a href="#四：社交栏" class="headerlink" title="四：社交栏"></a>四：社交栏</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/social.png" alt></p>
+<h3 id="1-个性签名"><a href="#1-个性签名" class="headerlink" title="1.个性签名"></a>1.个性签名</h3><p>这个在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>里面，由如下代码定义</p>
+<pre><code>description: 南风过境，十里春风不如你！
+</code></pre><p>直接修改即可</p>
+<h3 id="2-内容"><a href="#2-内容" class="headerlink" title="2.内容"></a>2.内容</h3><p>没错仍然是 <font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>这个文件，找到</p>
+<pre><code>#social  url, img PC端配置
+social:
+  github: {url: https://github.com/yremp, img: /img/social/github.png}
+  wangyiyun: {url: https://music.163.com/, img: /img/social/wangyiyun.png}
+  zhihu: {url: https://www.zhihu.com/, img: /img/social/zhihu.png}
+  qq: {url: /#, qrcode: /img/custom/qq.png, img: /img/social/qq.png}
+  wechat: {url: /#, qrcode: /img/custom/wechat.png, img: /img/social/wechat.png}
+
+#social  url, img 移动端配置
+msocial:
+  github: {url: https://github.com/yremp, fa: fa-github, color: 333}
+  weibo: {url: https://weibo.com/, fa: fa-weibo, color: dd4b39}
+  qq: {url: https://im.qq.com/news/, fa: fa-qq, color: 25c6fe}  
+
+</code></pre><p>前面URL对应点击后跳转地址，后面是图标路径，注意这个不是本地路径，是使用了cdn后的路径，上一栏 <font color="#0099ff" size="3" face="黑体">头像</font>设置中有介绍。至于pc和移动端注释已经标示了，就不多作介绍。</p>
+<h3 id="3-社交栏整体样式"><a href="#3-社交栏整体样式" class="headerlink" title="3.社交栏整体样式"></a>3.社交栏整体样式</h3><p>在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/source/css/style.css </font>Ctrl+f 搜索 header-info，这就是这个地方对应的div的class名字<br>就可以在代码中找到</p>
+<pre><code>.header-info {
+    width: 63%;
+    margin: auto;
+    font-size: 16px;
+    color: #eaeadf;
+    background: rgba(255,255,255,.8);
+    padding: 15px;
+    margin-top: 22px;
+    letter-spacing: 0;
+    line-height: 30px;
+    border-radius: 10px;
+    box-sizing: initial;
+    white-space: nowrap;
+}
+.header-info:before {
+    content: &quot;&quot;;
+    position: absolute;
+    top: 127.5px;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255,255,255,.8) transparent;
+}
+.header-info p {
+    margin:0;
+    color: #605f5f;
+    font-family:&#39;Ubuntu&#39;,sans-serif;
+    font-weight:700
+}
+</code></pre><p>这就是其对应的样式表内容，大家可以根据需要修改。<font color="#FF1493" size="3" face="黑体">(Chrome) Ctrl+Shift+C</font><font color="#0099ff" size="3" face="黑体">然后点击你想查看的部分就会给你提示对应的部分例如：<br><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/teach1.png" alt>对应关系已经标出来，大家可以用这个功能快速找到网页和css对应关系，方便进行修改<br></font></p>
+<h2 id="五：顶部图片和效果"><a href="#五：顶部图片和效果" class="headerlink" title="五：顶部图片和效果"></a>五：顶部图片和效果</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/image/headbg.png" alt></p>
+<h3 id="1-顶部图片"><a href="#1-顶部图片" class="headerlink" title="1.顶部图片"></a>1.顶部图片</h3><p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>中找到如下代码：</p>
+<pre><code># 背景图片 根据喜好修改
+bg:
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(1).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(3).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(4).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(6).jpg.webp
+  - https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(8).jpg.webp
+</code></pre><h3 id="2-顶部图片效果"><a href="#2-顶部图片效果" class="headerlink" title="2.顶部图片效果"></a>2.顶部图片效果</h3><p>我的顶部效果改为了无，个人不太喜欢。可根据需要修改在：</p>
+<p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>中找到如下代码：</p>
+<pre><code># 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+bgclass: 
+</code></pre><p>具体参数原作者在注释中已经标示</p>
+<h2 id="六：通知栏"><a href="#六：通知栏" class="headerlink" title="六：通知栏"></a>六：通知栏</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/message.png" alt></p>
+<p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>中找到如下代码：</p>
+<pre><code>notice: 欢迎来到我的博客！
+</code></pre><p>直接修改内容即可</p>
+<h2 id="七：startdash"><a href="#七：startdash" class="headerlink" title="七：startdash"></a>七：startdash</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/start.png" alt></p>
+<h3 id="1-模块名字"><a href="#1-模块名字" class="headerlink" title="1.模块名字"></a>1.模块名字</h3><p>在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/layout/_partial/startdash.ejs</font>中有如下：</p>
+<pre><code>&lt;div class=&quot;top-feature-row&quot;&gt;
+  &lt;h1 class=&quot;fes-title&quot; style=&quot;font-family: &#39;Ubuntu&#39;, sans-serif;&quot;&gt;
+  &lt;i class=&quot;fa fa-anchor&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;/i&gt;
+  startdash&lt;/h1&gt;
+  &lt;% for (dash in theme.startdash) { %&gt;
+  ....
+</code></pre><p>将其中startdash改为你想要的即可；</p>
+<h3 id="2-内容设置"><a href="#2-内容设置" class="headerlink" title="2.内容设置"></a>2.内容设置</h3><p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>中找到如下代码：</p>
+<pre><code># startdash url, title, desc img
+startdash: 
+  - {url: /theme-sakura/, title: Sakura, desc: 本站主题, img: /img/startdash/sakura.md.png}
+  - {url: http://space.bilibili.com/381786734, title: Bilibili, desc: b站视频, img: /img/startdash/bilibili.jpg}
+  - {url: /, title: 万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+</code></pre><p>注释也已经标示出其参数，根据参数修改即可。</p>
+<h2 id="八：Discovery"><a href="#八：Discovery" class="headerlink" title="八：Discovery"></a>八：Discovery</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/find.png" alt></p>
+<p><font color="#FF1493" size="3" face="黑体"> /themes/sakura/layout/index.ejs</font>中找到如下代码：</p>
+<pre><code>      &lt;h1 class=&quot;main-title&quot; style=&quot;font-family: &#39;Ubuntu&#39;, sans-serif;&quot;&gt;
+      &lt;i class=&quot;fa fa-envira&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      Discovery&lt;/h1&gt;
+      &lt;%- partial(&#39;_partial/archive&#39;, {pagination: 2, index: true}) %&gt;
+      &lt;!-- 首页默认取最最新文章集 --&gt;
+</code></pre><p>Discovery就是标题，直接修改即可</p>
+<h2 id="九：文章封面和内容；"><a href="#九：文章封面和内容；" class="headerlink" title="九：文章封面和内容；"></a>九：文章封面和内容；</h2><p>1.封面<br><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/page.png" alt><br>这个在在你写博客时，有photo属性，设置url即可 ，下面是示例：</p>
+<pre><code>title: Sakura美化教程
+author: hojun
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+authorLink: https://yremp.club
+authorAbout: 
+authorDesc: 
+categories: 技术
+date: 2019-5-26 12:16:01
+comments: true
+tags: 
+ - web
+keywords: Sakura主题自定义美化教程
+description:  Sakura美化教程
+photos: https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png
+---
+</code></pre><p>photos 就是文章的封面</p>
+<h2 id="十：归档子页面"><a href="#十：归档子页面" class="headerlink" title="十：归档子页面"></a>十：归档子页面</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/t.png" alt><br>这个相关的设置是在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/language/zh-cn.yml</font><br>找到如下代码：</p>
+<pre><code>#category
+技术:
+    zh: 野生技术协会
+    en: Technical Communication
+    img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(1).jpg.webp
+生活:
+    zh: 生活
+    en: Live
+    img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(2).jpg.webp
+......
+</code></pre><p>这就不用我解释，对比图片很容易看懂</p>
+<h2 id="十一：清单子页面"><a href="#十一：清单子页面" class="headerlink" title="十一：清单子页面"></a>十一：清单子页面</h2><h3 id="1-悦读和图集，"><a href="#1-悦读和图集，" class="headerlink" title="1.悦读和图集，"></a>1.悦读和图集，</h3><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/read.png" alt><br>在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/language/zh-cn.yml</font><br>找到如下代码：</p>
+<pre><code>#tag
+悦读:
+    img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(6).jpg.webp
+图集:
+    img: https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.5/img/cover/(5).jpg.webp
+web:
+    img:  https://cdn.jsdelivr.net/gh/yremp/resource@1.0/img/pic.jpg
+</code></pre><p>对比图片进行修改</p>
+<h3 id="2-番组"><a href="#2-番组" class="headerlink" title="2.番组"></a>2.番组</h3><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/bili.png" alt><br>这个页面对应的配置是在<font color="#FF1493" size="3" face="黑体"> /source/bangumi/index.md</font>中修改，其中代码如下：</p>
+<pre><code>---
+layout: bangumi
+title: bangumi
+comments: false
+date: 2019-02-10 21:32:48
+keywords:
+description:
+bangumis:
+  - img: http://pic.netbian.com/uploads/allimg/180413/121552-152359295246db.jpg
+    title: 狐妖小红娘
+    status: 追番中
+    progress: 100
+    jp: 狐妖小红娘
+    time: 2019-05-24 SUN.
+    desc: 白月初……
+  - img: http://pic.netbian.com/uploads/allimg/170605/130458-149663909840b3.jpg
+    title: 名侦探柯南
+    status: 追番中
+    progress: 1000
+    jp: 名探偵コナン
+    time: 2019-05-24 SUN.
+    desc: 中生侦探工藤新一……
+---
+</code></pre><p>对比图片修改内容即可，也可以增加其他内容。</p>
+<h3 id="3-歌单"><a href="#3-歌单" class="headerlink" title="3.歌单"></a>3.歌单</h3><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/music.png" alt><br>整个页面配置在<font color="#FF1493" size="3" face="黑体"> /source/music/index.md</font>中：<br>其代码如下：</p>
+<pre><code>---
+title: music
+date: 2018-12-20 23:14:28
+keywords: 喜欢的音乐
+description: 
+comments: false
+photos: http://pic.netbian.com/uploads/allimg/170911/233802-15051442827782.jpg
+---
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=100% height=450 src=&quot;//music.163.com/outchain/player?type=0&amp;id=762797776&amp;auto=1&amp;height=430&quot;&gt;&lt;/iframe&gt;
+</code></pre><p>前面是常规的信息配置没什么好说的，photos就是这个页面的顶部图片，在</p>
+<pre><code>&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=100% height=450 src=&quot;//music.163.com/outchain/player?type=0&amp;id=762797776&amp;auto=1&amp;height=430&quot;&gt;&lt;/iframe&gt;
+</code></pre><p>中需要改一下id，这个id就是网易云音乐歌单id，怎么获取如下图：<br><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/teach2.png" alt><br>登录网页版网易云音乐，打开歌单，在地址栏中可以看到</p>
+<pre><code>https://music.163.com/#/playlist?id=762797776
+</code></pre><p>其中id后面的数字复制，粘贴到代码里面的id后面就可以显示自己的歌单了。</p>
+<h2 id="十二：友情链接相关配置"><a href="#十二：友情链接相关配置" class="headerlink" title="十二：友情链接相关配置"></a>十二：友情链接相关配置</h2><p><font color="#FF1493" size="3" face="黑体">(留言板/source/comment/index.md就一个背景修改就不出教程了，为了给下面其他教程留空间)</font><br><br><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/links.png" alt></p>
+<h3 id="1-内容配置"><a href="#1-内容配置" class="headerlink" title="1.内容配置"></a>1.内容配置</h3><p>友情链接内容配置具体在<font color="#FF1493" size="3" face="黑体"> /source/link/index.md</font><br>代码如下</p>
+<pre><code>......
+photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg //背景图片
+links:
+  - group: 小伙伴们
+    desc: 欢迎交换友链 ꉂ(ˊᗜˋ)
+    items:
+    - url: https://yremp.github.io
+      img: https://cloud.moezx.cc/Picture/svg/landscape/fields.svg
+      name: 好友1
+      desc: 点击查看
+......   
+---
+</code></pre><p>根据实际情况修改其中的内容</p>
+<h3 id="2-界面背景及布局"><a href="#2-界面背景及布局" class="headerlink" title="2.界面背景及布局"></a>2.界面背景及布局</h3><p>界面背景及布局主要在<font color="#FF1493" size="3" face="黑体">/themes/sakura/layout/links.ejs</font><br>代码如下：</p>
+<pre><code>        ........
+        &lt;p&gt;
+            欢迎交换友链qaq ꉂ(ˊᗜˋ)&lt;/p&gt;
+        &lt;p&gt;
+            请留言告诉我你的：
+            &lt;br&gt; 1、名字
+            &lt;br&gt; 2、一句话介绍（熟人我会亲自帮写的）
+            &lt;br&gt; 3、主页地址
+            &lt;br&gt; 4、头像（HTTPS*，可在评论区上传）
+        &lt;/p&gt;
+        ........
+</code></pre><p>对照图片根据需要修改</p>
+<h2 id="十三：左下角播放器"><a href="#十三：左下角播放器" class="headerlink" title="十三：左下角播放器"></a>十三：左下角播放器</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/aplayer.png" alt><br>1.设置为自己的歌单 ，和清单里的歌单一样要先拿到网易歌单id，怎么获取上面<font color="#0099ff" size="3" face="黑体">清单子页面</font>里有相关介绍；<br>然后在<font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font>中找到如下代码：</p>
+<pre><code>player: 
+  id: 762797776
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: none
+  volume: 0.7
+  mutex: true
+</code></pre><p>修改为自己的网易云歌单id即可</p>
+<h2 id="十四：切换背景"><a href="#十四：切换背景" class="headerlink" title="十四：切换背景"></a>十四：切换背景</h2><p><img src="https://cdn.jsdelivr.net/gh/yremp2/image@2.0/skin.png" alt><br>严格意义上来说这个并不算增加，算是恢复，作者在移植这款主题时，只删除了对应的ejs布局文件，并没有删除style.css和js里面相关代码，想要加上这个功能只需要把原作者的相关的div等加上就行。大佬可自行到白猫（原作者）网站查看源代码加上就行。如果是小白或者比较懒得朋友那你只需要按以下几个步骤即可实现这个功能：<br>1:<font color="#FF1493" size="3" face="黑体">找到 /themes/sakura/layout/layout.ejs</font><br>在里面加入两行代码代码位置和内容如下（注释下面那两行）：</p>
+<pre><code>......
+......
+......
+ &lt;!-- 下面两行为了实现换肤功能 --&gt;
+  &lt;%- partial(&#39;_partial/setdisplay&#39;) %&gt; 
+  &lt;%- partial(&#39;_partial/set&#39;, null, {cache: !config.relative_link}) %&gt;
+
+  &lt;%- partial(&#39;_partial/mheader&#39;, null, {cache: !config.relative_link}) %&gt;
+  &lt;%- partial(&#39;_partial/aplayer&#39;, null, {cache: !config.relative_link}) %&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>2: 在<font color="#FF1493" size="3" face="黑体">/themes/sakura/layout/_partial</font>文件夹下面依次新建set.ejs和setdisplay.ejs,其内容分别如下：</p>
+<p><font color="#FF1493" size="3" face="黑体">set.ejs</font></p>
+<pre><code>&lt;div class=&quot;changeSkin-gear no-select&quot;&gt;
+    &lt;div class=&quot;keys&quot; id=&quot;setbtn&quot;&gt; &lt;span id=&quot;open-skinMenu&quot;&gt; 切换主题 | SCHEME TOOL &amp;nbsp;&lt;i
+                class=&quot;iconfont icon-gear inline-block rotating&quot;&gt;&lt;/i&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><font color="#FF1493" size="3" face="黑体">setdisplay.ejs</font></p>
+<pre><code>&lt;div class=&quot;skin-menu no-select&quot; id=&quot;mainskin&quot;  style=&quot;position: fixed&quot;&gt;
+    &lt;div class=&quot;theme-controls row-container&quot;&gt;
+        &lt;ul class=&quot;menu-list&quot;&gt;
+            &lt;li id=&quot;white-bg&quot;&gt; &lt;i class=&quot;fa fa-television&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;sakura-bg&quot;&gt; &lt;i class=&quot;iconfont icon-sakura&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;gribs-bg&quot;&gt; &lt;i class=&quot;fa fa-slack&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;KAdots-bg&quot;&gt; &lt;i class=&quot;iconfont icon-dots&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;totem-bg&quot;&gt; &lt;i class=&quot;fa fa-optin-monster&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;pixiv-bg&quot;&gt; &lt;i class=&quot;iconfont icon-pixiv&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;bing-bg&quot;&gt; &lt;i class=&quot;iconfont icon-bing&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+            &lt;li id=&quot;dark-bg&quot;&gt; &lt;i class=&quot;fa fa-moon-o&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;canvas id=&quot;night-mode-cover&quot;&gt;&lt;/canvas&gt;
+</code></pre><h2 id="十五：评论不在白名单问题"><a href="#十五：评论不在白名单问题" class="headerlink" title="十五：评论不在白名单问题"></a>十五：评论不在白名单问题</h2><p>首先，和评论相关的配置在：<font color="#FF1493" size="3" face="黑体"> /themes/sakura/config.yml </font><br>具体代码：</p>
+<pre><code># Valine
+valine: true
+v_appId: Qtrxu5pUbpfjbn2CpMH1jetC-gzGzoHsz
+v_appKey: 72NpGpYhuAYcKyDhYSOFE1b2
+</code></pre><p>这里面的id和Key是需要修改的，因为这是我的v_appId和v_appKey，你需要去<a href="https://leancloud.cn/" target="_blank" rel="noopener">注册</a>。具体的请自行百度。只提醒一点，注册完以后 ，申请app以后，要设置 <font color="#FF1493" size="3" face="黑体"> 白名单</font>。</p>
+<p><center>如果发现教程有什么问题或者你有什么问题，请到评论区留言。转载请标明作者和原文地址</center></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/donate/MyAliPayQR.png"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/custom/donate/MyWeChanQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/07/01/gitalk/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="/images/huyao.gif" data-src="https://cdn.jsdelivr.net/gh/yremp/resource@4.3/img/posts/gitalkcover.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Hexo-Sakura安装Gitalk</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/05/24/jsDeliver+github/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="/images/huyao.gif" data-src="https://upload.cc/i1/2019/05/24/68p7nf.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                jsDeliver+github使用教程</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.1/gitalk.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yremp/yremp-css@1.3/gitalk.css">
+  <div id="gitalk-container"></div>
+  
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+          clientID: '8972e4300aeaabe97cc0',
+          clientSecret: '988d6142b09dd52db79a2b832ba8f068df13a99a',
+          id: window.location.pathname,
+          repo: 'yremp.github.io',
+          owner: 'yremp',
+          admin: 'yremp'
+      })
+      gitalk.render('gitalk-container')
+    </script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <a href="./" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/yremp/cdn@2.1.4//img/custom/head.jpg" itemprop="image" alt="yremp" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="./" itemprop="url" rel="author">yremp</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>
+    <!-- <div class="waifu">
+    <div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div>
+  </div>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/assets/waifu.min.css">
+<script src="/js/JudeClient.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/assets/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/assets/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/yremp/live2d@1.0/assets/config.js"></script>
+有bug -->
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 yremp<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<div id="gitalk-container"></div>
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+      <i>I have seen many people,like your</i>
+        <span style="color: #b9b9b9;"> 
+         <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block">
+         </i>
+        </span>
+        <i> hair,like your face,but not your eyes</i>
+      </p>
+    </div>
+    <a href="https://www.upyun.com" target="_blank" alt=" CDN" rel="nofollow">
+      <img src="https://www.yremp.live/images/2019/08/17/_logo535592.png" alt="又拍云" style="height: 3em; max-height: 3em;padding-bottom: 0px; margin-bottom: -0.5em">
+      </a>&nbsp;&nbsp;
+
+    <a href="https://www.jsdelivr.com/" target="_blank" alt="Free CDN" rel="nofollow">
+      <img src="https://www.yremp.live/images/2019/08/17/JsDelivr_Logo0bd9a.png" alt="jsDelivr" style="height: 2em; max-height: 2em;padding-bottom: 0px;">
+      </a>&nbsp;&nbsp;
+  
+      <a href="https://github.com/" target="_blank" alt="Github" rel="nofollow">
+      <img src="https://www.yremp.live/images/2019/08/17/Github1889a.png" alt="github" style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;">
+      </a>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<!-- gitalk-js -->
+
+<script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.1/gitalk.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!-- <script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script> -->
+<script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.0/Valine.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+ 
+  var Poi = {"pjax":"1","movies":{"url": "https://yremp.live/wp-content/uploads/video","name":"ThreeBody02.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  
+  var Poi = {"pjax":"1","movies":{"url": "https://yremp.live/wp-content/uploads/video","name":"ThreeBody02.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+   
+<canvas id="night-mode-cover"></canvas>
+<style>
+
+
+#mainskin{
+    position: fixed;
+}
+
+#night-mode-cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: rgba(86, 86, 86, .2);
+	pointer-events: none;
+	visibility: hidden
+}
+
+.skin-menu {
+	position: fixed;
+	bottom: 60px;
+	right: 10px;
+	height: auto;
+	width: 220px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5);
+	z-index: 99;
+	font-family: 'Ubuntu', sans-serif;
+	transform: scaleX(0);
+	transiton-property: transform, background;
+	transition-duration: .3s, .3s
+}
+
+.skin-menu.show {
+	transform: scaleX(1)
+}
+
+.skin-menu:after {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #fff transparent transparent
+}
+
+.skin-menu .row-container {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	text-align: center
+}
+
+.skin-menu .row-container .menu-list {
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 10px auto
+}
+
+.menu-list li {
+	display: inline-block;
+	margin: 6px;
+	line-height: 36px;
+	width: 36px;
+	background-color: #f5f5f5;
+	border-radius: 50%;
+	cursor: pointer
+}
+
+.menu-list li:hover {
+	background-color: #fc3;
+	color: #fff
+}
+
+.skin-menu .row-container.font-family-controls {
+	padding: 3px 12px 16px
+}
+
+.font-family-controls button {
+	display: inline-block;
+	border-style: none;
+	border-radius: 5px;
+	padding: 5px;
+	height: 40px;
+	width: calc(50% - 10px);
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	margin: 0 4px;
+	box-shadow: none;
+	background-color: #f5f5f5;
+	cursor: pointer
+}
+
+.font-family-controls button.selected {
+	background-color: #fc3;
+	color: #fff
+}
+
+.control-btn-serif {
+	font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc, 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+}
+
+.control-btn-sans-serif {
+	font-family: 'Ubuntu', sans-serif
+}
+
+.lazyload {
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .3s -webkit-filter linear;
+	-moz-transition: .3s -moz-filter linear;
+	-moz-transition: .3s filter linear;
+	-ms-transition: .3s -ms-filter linear;
+	-o-transition: .3s -o-filter linear;
+	transition: .3s filter linear, .3s -webkit-filter linear
+}
+
+.lazyload[src*="#lazyload-blur"],
+.lazyload[style*="#lazyload-blur"] {
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px)
+}
+
+h1[id*=toc-head]:before,
+h2[id*=toc-head]:before,
+h3[id*=toc-head]:before,
+h4[id*=toc-head]:before,
+h5[id*=toc-head]:before,
+h6[id*=toc-head]:before {
+	display: block;
+	content: " ";
+	height: 80px;
+	margin-top: -80px;
+	visibility: hidden
+}
+
+h2.footer-comment-flag:before,
+h2.footer-comment-flag:after {
+	display: none;
+	content: "";
+	height: 0;
+	margin: 0
+}
+
+img[src*="#float-left"] {
+	float: left
+}
+
+img[src*="#float-right"] {
+	float: right
+}
+
+img[src*="#width-full"] {
+	width: 100%
+}
+
+img[src*="#width-90"] {
+	width: 90%
+}
+
+img[src*="#width-80"] {
+	width: 80%
+}
+
+img[src*="#width-70"] {
+	width: 70%
+}
+
+img[src*="#width-60"] {
+	width: 60%
+}
+
+img[src*="#width-50"] {
+	width: 50%
+}
+
+img[src*="#width-40"] {
+	width: 40%
+}
+
+img[src*="#width-30"] {
+	width: 30%
+}
+
+img[src*="#width-20"] {
+	width: 20%
+}
+
+img[src*="#width-10"] {
+	width: 10%
+}
+
+img[src*="#in-center"] {
+	margin-left: auto;
+	margin-right: auto;
+	display: block
+}
+</style></div>
+  <div id="mo-nav" class>
+  <div class="m-avatar">
+    <img src="https://yremp.live/wp-content/uploads/2019/06/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">君の名はyremp</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/yremp" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://im.qq.com/news/" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fas fa-home  fa-1x" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  far fa-folder-open" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fab fa-windows" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fas fa-clone" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fas fa-tasks" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 </p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: rgb(69, 111, 226);
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display:none;
+    background: rgba(255, 255, 255, 0);
+  }
+</style>
+<div class="aplayer" data-id="762797776" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-loop="all" data-order="random" data-preload="none" data-volume="0.7" data-mutex="true" < div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script></div> 
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>

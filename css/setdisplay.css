@@ -1,0 +1,414 @@
+
+#Snow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: rgba(125, 137, 95, 0);
+	pointer-events: none
+}
+
+#night-mode-cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	background: rgba(86, 86, 86, .2);
+	pointer-events: none;
+	visibility: hidden
+}
+
+.changeSkin {
+	position: fixed;
+	bottom: 0;
+	right: -600px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	font-family: 'Ubuntu';
+	padding: 10px 20px;
+	transiton-property: right;
+	transition-duration: .3s, .3s
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin-gear {
+	position: fixed;
+	bottom: -999px;
+	right: 5px;
+	width: auto;
+	height: auto;
+	z-index: 99;
+	visibility: hidden;
+	white-space: nowrap;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px 10px 0 0
+}
+
+.changeSkin .keys {
+	position: relative;
+	z-index: 99
+}
+
+.changeSkin .keys span {
+	cursor: pointer
+}
+
+.changeSkin .close-skinMenu {
+	position: relative;
+	z-index: 99;
+	cursor: pointer
+}
+
+.keys-line-add {
+	text-align: right;
+	margin-right: 22px
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+position:relative;
+z-index:99;
+cursor:pointer;
+}
+
+.changeSkin-gear span:before {
+	content: "åˆ‡æ¢ä¸»é¢˜ | Change Skin "
+}
+
+@media (max-width:800px) {
+	.changeSkin-gear span:before {
+		content: ""
+	}
+
+	.changeSkin i {
+		font-size: 20px
+	}
+
+	.changeSkin-gear i {
+		font-size: 20px
+	}
+}
+
+.img-preload {
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}
+
+.rotating {
+	-webkit-animation: rotating 3s linear infinite;
+	-moz-animation: rotating 3s linear infinite;
+	-ms-animation: rotating 3s linear infinite;
+	-o-animation: rotating 3s linear infinite;
+	animation: rotating 3s linear infinite
+}
+
+.inline-block {
+	display: inline-block
+}
+
+.block {
+	display: block
+}
+
+.center-text {
+	margin: auto;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 80px;
+	text-transform: uppercase
+}
+
+
+
+.code-block-fullscreen-html-scroll {
+	overflow: hidden
+}
+
+.chinese-font {
+	font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+}
+
+.chinese-tranditional-font {
+	font-family: Helvetica, Tahoma, Arial, "æ–‡æ³‰é©›æ­£é»‘", "WenQuanYi Zen Hei", "å„·é»‘ Pro", "LiHei Pro", "å¾®è»Ÿæ­£é»‘é«”", "Microsoft JhengHei", "æ¨™æ¥·é«”", DFKai-SB, sans-serif
+}
+
+.japanese-font {
+	font-family: æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“, 'Yu Gothic', YuGothic, 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ã‚·ãƒƒã‚¯ Pro', 'Hiragino Kaku Gothic Pro', ãƒ¡ã‚¤ãƒªã‚ª, Meiryo, Osaka, 'ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯', 'MS PGothic', sans-serif
+}
+
+.english-serif {
+	font-family: 'Noto Serif CJK SC', 'Noto Serif CJK', serif
+}
+
+.code-font {
+	font-family: 'Source Code Pro', monospace
+}
+
+.Ubuntu-font {
+	font-family: 'Ubuntu', sans-serif
+}
+
+.serif {
+	font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+}
+
+@media (max-width:860px) {
+	.serif {
+		font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+	}
+}
+
+.moe-mashiro {
+	font-family: 'Moe-Mashiro', 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+}
+
+.skin-menu {
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	height: auto;
+	width: 220px;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5);
+	z-index: 99;
+	font-family: 'Ubuntu', sans-serif;
+	transform: scaleX(0);
+	transiton-property: transform, background;
+	transition-duration: .3s, .3s
+}
+
+.skin-menu.show {
+	transform: scaleX(1)
+}
+
+.skin-menu:after {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #fff transparent transparent
+}
+
+.skin-menu .row-container {
+	height: auto;
+	margin: 0;
+	padding: 0;
+	text-align: center
+}
+
+.skin-menu .row-container .menu-list {
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 10px auto
+}
+
+.menu-list li {
+	display: inline-block;
+	margin: 6px;
+	line-height: 36px;
+	width: 36px;
+	background-color: #f5f5f5;
+	border-radius: 50%;
+	cursor: pointer
+}
+
+.menu-list li:hover {
+	background-color: #fc3;
+	color: #fff
+}
+
+.skin-menu .row-container.font-family-controls {
+	padding: 3px 12px 16px
+}
+
+.font-family-controls button {
+	display: inline-block;
+	border-style: none;
+	border-radius: 5px;
+	padding: 5px;
+	height: 40px;
+	width: calc(50% - 10px);
+	font-size: 15px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	margin: 0 4px;
+	box-shadow: none;
+	background-color: #f5f5f5;
+	cursor: pointer
+}
+
+.font-family-controls button.selected {
+	background-color: #fc3;
+	color: #fff
+}
+
+.control-btn-serif {
+	font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc, 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+}
+
+.control-btn-sans-serif {
+	font-family: 'Ubuntu', sans-serif
+}
+
+.lazyload {
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: blur(0px);
+	-webkit-transition: .3s -webkit-filter linear;
+	-moz-transition: .3s -moz-filter linear;
+	-moz-transition: .3s filter linear;
+	-ms-transition: .3s -ms-filter linear;
+	-o-transition: .3s -o-filter linear;
+	transition: .3s filter linear, .3s -webkit-filter linear
+}
+
+.lazyload[src*="#lazyload-blur"],
+.lazyload[style*="#lazyload-blur"] {
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px)
+}
+
+h1[id*=toc-head]:before,
+h2[id*=toc-head]:before,
+h3[id*=toc-head]:before,
+h4[id*=toc-head]:before,
+h5[id*=toc-head]:before,
+h6[id*=toc-head]:before {
+	display: block;
+	content: " ";
+	height: 80px;
+	margin-top: -80px;
+	visibility: hidden
+}
+
+h2.footer-comment-flag:before,
+h2.footer-comment-flag:after {
+	display: none;
+	content: "";
+	height: 0;
+	margin: 0
+}
+
+img[src*="#float-left"] {
+	float: left
+}
+
+img[src*="#float-right"] {
+	float: right
+}
+
+img[src*="#width-full"] {
+	width: 100%
+}
+
+img[src*="#width-90"] {
+	width: 90%
+}
+
+img[src*="#width-80"] {
+	width: 80%
+}
+
+img[src*="#width-70"] {
+	width: 70%
+}
+
+img[src*="#width-60"] {
+	width: 60%
+}
+
+img[src*="#width-50"] {
+	width: 50%
+}
+
+img[src*="#width-40"] {
+	width: 40%
+}
+
+img[src*="#width-30"] {
+	width: 30%
+}
+
+img[src*="#width-20"] {
+	width: 20%
+}
+
+img[src*="#width-10"] {
+	width: 10%
+}
+
+img[src*="#in-center"] {
+	margin-left: auto;
+	margin-right: auto;
+	display: block
+}
+
+

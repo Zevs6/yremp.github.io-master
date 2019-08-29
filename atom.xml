@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>yremp</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2019-08-12T03:45:46.416Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>yremp</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最近搭了一个图床</title>
+    <link href="/2019/08/12/images/"/>
+    <id>/2019/08/12/images/</id>
+    <published>2019-08-12T02:16:01.000Z</published>
+    <updated>2019-08-12T03:45:46.416Z</updated>
+    
+    <summary type="html">
+    
+      最近搭建了一个图床，图床地址：https://www.yremp.live ,欢迎大家使用。
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 社区项目</title>
+    <link href="/2019/08/06/spring-boot-community/"/>
+    <id>/2019/08/06/spring-boot-community/</id>
+    <published>2019-08-06T10:16:01.000Z</published>
+    <updated>2019-08-12T03:45:20.442Z</updated>
+    
+    <summary type="html">
+    
+      使用Spring Boot 开发的交流社区项目，项目特点是接入了github登录，支持markdown语法编辑，回复评论通知等功能。
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="Spring Boot" scheme="/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 文件上传</title>
+    <link href="/2019/07/26/spring-boot-fileupload/"/>
+    <id>/2019/07/26/spring-boot-fileupload/</id>
+    <published>2019-07-26T10:16:01.000Z</published>
+    <updated>2019-08-08T12:59:11.867Z</updated>
+    
+    <summary type="html">
+    
+      在Spring Boot 项目中如何上传文件，今天在这里分享一下。
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="Spring Boot" scheme="/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot SpringMVC常用的设置上下文方式</title>
+    <link href="/2019/07/25/spring-boot-context/"/>
+    <id>/2019/07/25/spring-boot-context/</id>
+    <published>2019-07-25T10:16:01.000Z</published>
+    <updated>2019-08-08T12:11:23.616Z</updated>
+    
+    <summary type="html">
+    
+      在学习Spring Boot中，SpringMVC常用的设置上下文方式如下：1.ModelAndView ,2.Model , 3.HttpServletRequest, 4.WebRequest
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="Spring Boot" scheme="/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot Thymeleaf模板引擎</title>
+    <link href="/2019/07/24/spring-boot-thymeleaf/"/>
+    <id>/2019/07/24/spring-boot-thymeleaf/</id>
+    <published>2019-07-24T10:16:01.000Z</published>
+    <updated>2019-08-08T12:11:10.455Z</updated>
+    
+    <summary type="html">
+    
+      模板引擎将页面和数据进行分离，简化开发过程，主流模板引擎：Thymeleaf、 FreeMarker、Velocity、Groovy、Mustache 、JSP 、Beetl
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="Spring Boot" scheme="/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 日志配置</title>
+    <link href="/2019/07/23/spring-boot-logs/"/>
+    <id>/2019/07/23/spring-boot-logs/</id>
+    <published>2019-07-23T10:16:01.000Z</published>
+    <updated>2019-08-08T13:03:06.395Z</updated>
+    
+    <summary type="html">
+    
+      Spring Boot日志文件可以在服务遇到问题时可以根据日志文件快速定位问题所在，解决问题。1.Spring Boot 日志级别：Debug-&gt;INFO-&gt;WARN-&gt;ERROR 2. Spring Boot 默认日志级别：INFO
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="Spring Boot" scheme="/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Sakura安装Gitalk</title>
+    <link href="/2019/07/01/gitalk/"/>
+    <id>/2019/07/01/gitalk/</id>
+    <published>2019-07-01T10:16:01.000Z</published>
+    <updated>2019-08-08T10:05:52.020Z</updated>
+    
+    <summary type="html">
+    
+      Hexo-Sakura安装Gitalk教程
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sakura新手使用手册</title>
+    <link href="/2019/05/26/teach/"/>
+    <id>/2019/05/26/teach/</id>
+    <published>2019-05-26T14:16:01.000Z</published>
+    <updated>2019-08-09T10:03:53.586Z</updated>
+    
+    <summary type="html">
+    
+      sakura使用教程，比较详细
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsDeliver+github使用教程</title>
+    <link href="/2019/05/24/jsDeliver+github/"/>
+    <id>/2019/05/24/jsDeliver+github/</id>
+    <published>2019-05-24T13:43:06.966Z</published>
+    <updated>2019-07-22T05:55:17.560Z</updated>
+    
+    <summary type="html">
+    
+      sDeliver+github使用教程
+    
+    </summary>
+    
+      <category term="转载" scheme="/categories/%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="/2019/05/24/Hexo-Theme-Sakura/"/>
+    <id>/2019/05/24/Hexo-Theme-Sakura/</id>
+    <published>2019-05-24T01:21:50.016Z</published>
+    <updated>2019-07-22T05:55:38.845Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+</feed>
